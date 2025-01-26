@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button onmouseover="changeButtonColor(this)" onmouseout="resetButtonColor(this)" onclick="toggleBackgroundColor()">Toggle Background Color</button>
+        <div class="spacer"></div>
+        <div class="slider-container">
+            <input type="range" min="10" max="50" oninput="adjustFontSize(this.value)">
+            <p id="dynamicText">This text changes size!</p>
+        </div>
+        <div class="spacer"></div>
+        <button onmouseover="changeButtonColor(this)" onmouseout="resetButtonColor(this)" onclick="showModal()">Show Modal</button>
+        <div id="modal" class="modal">
+            <p>This is a modal!</p>
+            <button onmouseover="changeButtonColor(this)" onmouseout="resetButtonColor(this)" onclick="closeModal()">Close</button>
+        </div>
+        <div class="spacer"></div>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <div class="spacer"></div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <div class="spacer"></div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <div class="spacer"></div>
+            <button type="submit" onmouseover="changeButtonColor(this)" onmouseout="resetButtonColor(this)">Submit</button>
+        </form>
+        <p id="errorMessages"></p>
+        <div class="spacer"></div>
+        <select id="options" onchange="displayMessage()">
+            <option value="Option1">Option 1</option>
+            <option value="Option2">Option 2</option>
+            <option value="Option3">Option 3</option>
+        </select>
+        <p id="customMessage"></p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

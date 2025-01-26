@@ -12,7 +12,7 @@
         <div class="spacer"></div>
         <div class="slider-container">
             <input type="range" min="10" max="50" oninput="adjustFontSize(this.value)">
-            <p id="dynamicText">This text changes size!</p>
+            <p id="dynamicText">Click on the bar to adjust this text size!</p>
         </div>
         <div class="spacer"></div>
         <button onmouseover="changeButtonColor(this)" onmouseout="resetButtonColor(this)" onclick="showModal()">Show Modal</button>
@@ -36,9 +36,10 @@
         <p id="errorMessages"></p>
         <div class="spacer"></div>
         <select id="options" onchange="displayMessage()">
-            <option value="Option1">Option 1</option>
-            <option value="Option2">Option 2</option>
-            <option value="Option3">Option 3</option>
+            <option value="">Select your Country</option>
+            <option value="Option1">Kenya</option>
+            <option value="Option2">Nigeria</option>
+            <option value="Option3">Tanzania</option>
         </select>
         <p id="customMessage"></p>
     </div>
